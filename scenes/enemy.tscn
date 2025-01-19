@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://yfamhw0hrk1a"]
+
+[ext_resource type="Texture2D" uid="uid://dvgedm268p43d" path="res://(frog)Jump (32x32).png" id="1_0us6b"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ng4ub"]
+
+[node name="Enemy" type="CharacterBody2D"]
+scale = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_0us6b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 2)
+shape = SubResource("CapsuleShape2D_ng4ub")
